@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img2PDF - Free Online Image to PDF Converter</title>
+    <meta name="description" content="Convert JPG, PNG, and WebP images to PDF online for free. No upload required, all processing is done in your browser for maximum privacy.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/pdf.png" type="image/png">
+    
+    <!-- Monetag Verification Script Here -->
+    <!-- Replace Monetag Script Here -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.575.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "jspdf": "https://esm.sh/jspdf@^4.2.0"
+  }
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://img.icons8.com/color/48/pdf.png" alt="Logo" width="32">
+                <span>Img2PDF</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#tool">Tool</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container text-center">
+                <h1>Convert Images to PDF <span class="text-blue">Instantly</span></h1>
+                <p>Professional-grade tool to transform JPG, PNG, and more into high-quality PDFs. 100% free and secure.</p>
+                <a href="#tool" class="btn btn-primary">Start Converting Now</a>
+            </div>
+        </section>
+
+        <!-- Ad Placeholder -->
+        <div class="container ad-slot header-ad">
+            <p>ADVERTISEMENT</p>
+        </div>
+
+        <!-- Tool Section -->
+        <section id="tool" class="tool-section">
+            <div class="container">
+                <div class="tool-card">
+                    <div id="dropZone" class="drop-zone">
+                        <div class="drop-content">
+                            <div class="icon-circle">↑</div>
+                            <h2>Upload Images</h2>
+                            <p>Click to browse or drag & drop files</p>
+                            <span class="file-info">JPG, PNG, WebP supported</span>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                    </div>
+
+                    <div id="imageListContainer" class="image-list-container hidden">
+                        <div class="list-header">
+                            <span id="imageCount">0 Images Selected</span>
+                            <div class="list-actions">
+                                <button id="addMoreBtn" class="btn-text">+ Add More</button>
+                                <button id="clearAllBtn" class="btn-text text-red">Clear All</button>
+                            </div>
+                        </div>
+                        <div id="imageList" class="image-list"></div>
+                        <div class="list-footer">
+                            <button id="convertBtn" class="btn btn-primary btn-full">
+                                <span id="btnText">Convert & Download PDF</span>
+                                <div id="btnLoader" class="loader hidden"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container grid-3">
+                <div class="feature-card">
+                    <h3>Lightning Fast</h3>
+                    <p>Zero wait time. Processing happens entirely in your browser.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Privacy First</h3>
+                    <p>Your files never leave your computer. 100% offline security.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>High Quality</h3>
+                    <p>Full resolution placement ensures crystal clear documents.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container grid-4">
+            <div>
+                <a href="index.html" class="logo mb-4">Img2PDF</a>
+                <p>Fast, secure client-side conversion.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>zansarizaid08@gmail.com</p>
+                <p>9552885753</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2024 Img2PDF. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- PropellerAds Push Script Here -->
+    <!-- Replace Propeller Script Here -->
+    <script>
+        setTimeout(() => {
+            console.log("Push Notification trigger");
+        }, 20000);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
