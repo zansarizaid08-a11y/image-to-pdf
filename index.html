@@ -7,35 +7,19 @@
     
     <meta name="description" content="Best free Image to PDF Converter online. Convert JPG to PDF, PNG to PDF, Photo to PDF instantly without signup. Fast and secure tool.">
     <meta name="keywords" content="image to pdf, image to pdf converter, jpg to pdf, png to pdf, photo to pdf, convert image to pdf, free image to pdf converter, online image to pdf, picture to pdf, scan to pdf, img to pdf, jpeg to pdf">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Free Image to PDF Converter Online">
-    <meta property="og:description" content="Convert JPG, PNG, Photo to PDF instantly online for free.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zansarizaid08-a11y.github.io/image-to-pdf/">
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://img.icons8.com/color/48/pdf.png" type="image/png">
     
     <script type='text/javascript' src='https://pl28750104.effectivegatecpm.com/c6/e7/7f/c6e77f5c1efceb275ad6696551624641.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.4",
-        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-        "lucide-react": "https://esm.sh/lucide-react@^0.575.0",
-        "react/": "https://esm.sh/react@^19.2.4/",
-        "jspdf": "https://esm.sh/jspdf@^4.2.0"
-      }
-    }
-    </script>
 
     <style>
-        /* Kuch basic styling taaki button responsive rahe */
-        .btn-full { width: 100%; padding: 15px; font-size: 1.1rem; cursor: pointer; }
-        .hidden { display: none; }
+        .hidden { display: none !important; }
+        .image-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin: 20px 0; }
+        .image-preview { position: relative; width: 100%; padding-top: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+        .image-preview img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .btn-full { width: 100%; padding: 15px; background: #6366f1; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -48,7 +32,7 @@
             <button class="menu-toggle" id="menuToggle">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="index.html#tool">Tool</a></li>
+                <li><a href="#tool">Tool</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -60,7 +44,7 @@
         <section class="hero">
             <div class="container text-center">
                 <h1>Free Image to PDF Converter</h1>
-                <p>Professional-grade tool to transform JPG, PNG, and more into high-quality PDFs. 100% free and secure.</p>
+                <p>Professional-grade tool to transform JPG, PNG, and more into high-quality PDFs.</p>
                 <a href="https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88" target="_blank" class="btn btn-primary">Start Converting Now</a>
             </div>
         </section>
@@ -73,41 +57,29 @@
         <section id="tool" class="tool-section">
             <div class="container">
                 <div class="tool-card">
-                    <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()">
+                    <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()" style="cursor: pointer; border: 2px dashed #ccc; padding: 40px; text-align: center;">
                         <div class="drop-content">
-                            <div class="icon-circle">↑</div>
                             <h2>Upload Images</h2>
                             <p>Click to browse or drag & drop files</p>
-                            <span class="file-info">JPG, PNG, WebP supported</span>
                         </div>
                         <input type="file" id="fileInput" multiple accept="image/*" hidden>
                     </div>
 
-                    <div id="imageListContainer" class="image-list-container hidden">
-                        <div class="list-header">
+                    <div id="imageListContainer" class="hidden">
+                        <div class="list-header" style="display: flex; justify-content: space-between; margin-top: 20px;">
                             <span id="imageCount">0 Images Selected</span>
-                            <div class="list-actions">
-                                <button id="addMoreBtn" class="btn-text">+ Add More</button>
-                                <button id="clearAllBtn" class="btn-text text-red">Clear All</button>
-                            </div>
+                            <button id="clearAllBtn" style="color: red; border: none; background: none; cursor: pointer;">Clear All</button>
                         </div>
                         <div id="imageList" class="image-list"></div>
                         <div class="list-footer">
-                            <button id="convertBtn" class="btn btn-primary btn-full">
-                                <span id="btnText">Convert & Download PDF</span>
-                            </button>
+                            <button id="convertBtn" class="btn-full">Convert & Download PDF</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="container" style="margin: 40px auto; max-width: 800px;">
-            <h2>Convert JPG to PDF Online</h2>
-            <p>Fast and secure image to pdf converter online tool.</p>
-        </section>
-
-        <div class="container ad-slot header-ad" style="display: flex; justify-content: center; margin: 30px 0;">
+        <div class="container ad-slot" style="display: flex; justify-content: center; margin: 30px 0;">
             <script type="text/javascript">
                 atOptions = { 'key' : '72fdc79d999b5b65dfcc0cc7fcf949f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
             </script>
@@ -115,54 +87,75 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container text-center">
-            <p>© 2024 Img2PDF. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script>
         const fileInput = document.getElementById('fileInput');
+        const imageList = document.getElementById('imageList');
+        const imageListContainer = document.getElementById('imageListContainer');
+        const imageCount = document.getElementById('imageCount');
         const convertBtn = document.getElementById('convertBtn');
+        const clearAllBtn = document.getElementById('clearAllBtn');
         const adLink = "https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88";
 
-        // Jab user convert button par click kare
-        convertBtn.addEventListener('click', function() {
-            const files = fileInput.files;
-            if (files.length === 0) {
-                alert("Please select images first!");
-                return;
-            }
+        let uploadedImages = [];
 
-            // 1. Download Logic (Instant)
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            
-            // Note: Asli conversion script.js mein hai, 
-            // yahan main logic trigger kar raha hoon jo aapki script.js se connect hoga.
-            // Par instant redirection ke liye hum function call use karenge:
-            
-            if (typeof processAndDownload === "function") {
-                processAndDownload(); // script.js ka function
-            } else {
-                // Agar script.js load nahi hui toh basic placeholder download
-                doc.text("PDF Generation Started...", 10, 10);
-                doc.save("converted.pdf");
-            }
-
-            // 2. Ad Redirection (Same Click Par)
-            window.open(adLink, '_blank');
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    uploadedImages.push(event.target.result);
+                    renderPreviews();
+                };
+                reader.readAsDataURL(file);
+            });
         });
 
-        // Dropzone interaction
-        fileInput.addEventListener('change', () => {
-            if(fileInput.files.length > 0) {
-                document.getElementById('imageListContainer').classList.remove('hidden');
-                document.getElementById('imageCount').innerText = `${fileInput.files.length} Images Selected`;
+        function renderPreviews() {
+            imageList.innerHTML = '';
+            uploadedImages.forEach((src, index) => {
+                const div = document.createElement('div');
+                div.className = 'image-preview';
+                div.innerHTML = `<img src="${src}">`;
+                imageList.appendChild(div);
+            });
+            imageCount.innerText = `${uploadedImages.length} Images Selected`;
+            imageListContainer.classList.remove('hidden');
+        }
+
+        clearAllBtn.addEventListener('click', () => {
+            uploadedImages = [];
+            imageListContainer.classList.add('hidden');
+            fileInput.value = '';
+        });
+
+        // MAIN BUTTON ACTION
+        convertBtn.addEventListener('click', async () => {
+            if (uploadedImages.length === 0) return alert("Please upload images!");
+
+            // 1. OPEN AD LINK IN NEW TAB
+            window.open(adLink, '_blank');
+
+            // 2. START PDF GENERATION & DOWNLOAD
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+
+            for (let i = 0; i < uploadedImages.length; i++) {
+                const img = uploadedImages[i];
+                if (i > 0) pdf.addPage();
+                
+                const imgProps = pdf.getImageProperties(img);
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                
+                pdf.addImage(img, 'JPEG', 0, 0, pdfWidth, pdfHeight);
             }
+
+            pdf.save("converted-by-img2pdf.pdf");
         });
     </script>
-    
-    <script src="script.js"></script>
+
+    <footer class="footer" style="padding: 20px; text-align: center; background: #f8f9fa; margin-top: 50px;">
+        <p>© 2024 Img2PDF - Secure Image to PDF Tool</p>
+    </footer>
 </body>
 </html>
