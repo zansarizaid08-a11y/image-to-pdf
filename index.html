@@ -7,19 +7,24 @@
     
     <meta name="description" content="Best free Image to PDF Converter online. Convert JPG to PDF, PNG to PDF, Photo to PDF instantly without signup. Fast and secure tool.">
     <meta name="keywords" content="image to pdf, image to pdf converter, jpg to pdf, png to pdf, photo to pdf, convert image to pdf, free image to pdf converter, online image to pdf, picture to pdf, scan to pdf, img to pdf, jpeg to pdf">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Free Image to PDF Converter Online">
+    <meta property="og:description" content="Convert JPG, PNG, Photo to PDF instantly online for free.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zansarizaid08-a11y.github.io/image-to-pdf/">
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://img.icons8.com/color/48/pdf.png" type="image/png">
     
     <script type='text/javascript' src='https://pl28750104.effectivegatecpm.com/c6/e7/7f/c6e77f5c1efceb275ad6696551624641.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+    
     <style>
         .hidden { display: none !important; }
-        .image-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin: 20px 0; }
-        .image-preview { position: relative; width: 100%; padding-top: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+        .image-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; margin: 20px 0; }
+        .image-preview { position: relative; width: 100%; padding-top: 100%; border-radius: 8px; overflow: hidden; border: 2px solid #eee; }
         .image-preview img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .btn-full { width: 100%; padding: 15px; background: #6366f1; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -32,7 +37,7 @@
             <button class="menu-toggle" id="menuToggle">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#tool">Tool</a></li>
+                <li><a href="index.html#tool">Tool</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -44,7 +49,7 @@
         <section class="hero">
             <div class="container text-center">
                 <h1>Free Image to PDF Converter</h1>
-                <p>Professional-grade tool to transform JPG, PNG, and more into high-quality PDFs.</p>
+                <p>Professional-grade tool to transform JPG, PNG, and more into high-quality PDFs. 100% free and secure.</p>
                 <a href="https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88" target="_blank" class="btn btn-primary">Start Converting Now</a>
             </div>
         </section>
@@ -57,26 +62,37 @@
         <section id="tool" class="tool-section">
             <div class="container">
                 <div class="tool-card">
-                    <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()" style="cursor: pointer; border: 2px dashed #ccc; padding: 40px; text-align: center;">
+                    <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()" style="cursor: pointer;">
                         <div class="drop-content">
+                            <div class="icon-circle">↑</div>
                             <h2>Upload Images</h2>
                             <p>Click to browse or drag & drop files</p>
+                            <span class="file-info">JPG, PNG, WebP supported</span>
                         </div>
                         <input type="file" id="fileInput" multiple accept="image/*" hidden>
                     </div>
 
-                    <div id="imageListContainer" class="hidden">
-                        <div class="list-header" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <div id="imageListContainer" class="image-list-container hidden">
+                        <div class="list-header">
                             <span id="imageCount">0 Images Selected</span>
-                            <button id="clearAllBtn" style="color: red; border: none; background: none; cursor: pointer;">Clear All</button>
+                            <div class="list-actions">
+                                <button id="clearAllBtn" class="btn-text text-red">Clear All</button>
+                            </div>
                         </div>
                         <div id="imageList" class="image-list"></div>
                         <div class="list-footer">
-                            <button id="convertBtn" class="btn-full">Convert & Download PDF</button>
+                            <button id="convertBtn" class="btn btn-primary btn-full">Convert & Download PDF</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="container" style="margin: 40px auto; max-width: 800px;">
+            <h2>Convert JPG to PDF Online</h2>
+            <p>This free image to pdf converter helps you convert jpg to pdf, png to pdf and photo to pdf easily without signup.</p>
+            <h2>Online Photo to PDF Tool</h2>
+            <p>You can convert multiple images into a single PDF file using this fast and secure image to pdf converter online tool.</p>
         </section>
 
         <div class="container ad-slot" style="display: flex; justify-content: center; margin: 30px 0;">
@@ -85,9 +101,58 @@
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/72fdc79d999b5b65dfcc0cc7fcf949f/invoke.js"></script>
         </div>
+
+        <section class="features">
+            <div class="container grid-3">
+                <div class="feature-card"><h3>Lightning Fast</h3><p>Zero wait time. Processing happens entirely in your browser.</p></div>
+                <div class="feature-card"><h3>Privacy First</h3><p>Your files never leave your computer. 100% offline security.</p></div>
+                <div class="feature-card"><h3>High Quality</h3><p>Full resolution placement ensures crystal clear documents.</p></div>
+            </div>
+        </section>
     </main>
 
+    <footer class="footer">
+        <div class="container grid-4">
+            <div>
+                <a href="index.html" class="logo mb-4">Img2PDF</a>
+                <p>Fast, secure client-side conversion.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>zansarizaid08@gmail.com</p>
+                <p>9552885753</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2024 Img2PDF. All rights reserved. | <a href="https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88" target="_blank" style="color: #6366f1; font-weight: bold;">Support Our Site</a></p>
+        </div>
+    </footer>
+
     <script>
+        // Navbar Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // PDF Logic
         const fileInput = document.getElementById('fileInput');
         const imageList = document.getElementById('imageList');
         const imageListContainer = document.getElementById('imageListContainer');
@@ -112,7 +177,7 @@
 
         function renderPreviews() {
             imageList.innerHTML = '';
-            uploadedImages.forEach((src, index) => {
+            uploadedImages.forEach((src) => {
                 const div = document.createElement('div');
                 div.className = 'image-preview';
                 div.innerHTML = `<img src="${src}">`;
@@ -128,34 +193,26 @@
             fileInput.value = '';
         });
 
-        // MAIN BUTTON ACTION
+        // Click Action: Download + Ad Redirect
         convertBtn.addEventListener('click', async () => {
-            if (uploadedImages.length === 0) return alert("Please upload images!");
+            if (uploadedImages.length === 0) return;
 
-            // 1. OPEN AD LINK IN NEW TAB
+            // 1. Open Ad
             window.open(adLink, '_blank');
 
-            // 2. START PDF GENERATION & DOWNLOAD
+            // 2. Generate PDF
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF();
-
             for (let i = 0; i < uploadedImages.length; i++) {
-                const img = uploadedImages[i];
                 if (i > 0) pdf.addPage();
-                
+                const img = uploadedImages[i];
                 const imgProps = pdf.getImageProperties(img);
                 const pdfWidth = pdf.internal.pageSize.getWidth();
                 const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-                
                 pdf.addImage(img, 'JPEG', 0, 0, pdfWidth, pdfHeight);
             }
-
-            pdf.save("converted-by-img2pdf.pdf");
+            pdf.save("Images-to-PDF.pdf");
         });
     </script>
-
-    <footer class="footer" style="padding: 20px; text-align: center; background: #f8f9fa; margin-top: 50px;">
-        <p>© 2024 Img2PDF - Secure Image to PDF Tool</p>
-    </footer>
 </body>
 </html>
