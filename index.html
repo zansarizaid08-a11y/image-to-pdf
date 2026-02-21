@@ -31,6 +31,12 @@
       }
     }
     </script>
+
+    <style>
+        /* Kuch basic styling taaki button responsive rahe */
+        .btn-full { width: 100%; padding: 15px; font-size: 1.1rem; cursor: pointer; }
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -67,7 +73,7 @@
         <section id="tool" class="tool-section">
             <div class="container">
                 <div class="tool-card">
-                    <div id="dropZone" class="drop-zone">
+                    <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()">
                         <div class="drop-content">
                             <div class="icon-circle">↑</div>
                             <h2>Upload Images</h2>
@@ -89,7 +95,6 @@
                         <div class="list-footer">
                             <button id="convertBtn" class="btn btn-primary btn-full">
                                 <span id="btnText">Convert & Download PDF</span>
-                                <div id="btnLoader" class="loader hidden"></div>
                             </button>
                         </div>
                     </div>
@@ -99,76 +104,65 @@
 
         <section class="container" style="margin: 40px auto; max-width: 800px;">
             <h2>Convert JPG to PDF Online</h2>
-            <p>This free image to pdf converter helps you convert jpg to pdf, png to pdf and photo to pdf easily without signup.</p>
-
-            <h2>Online Photo to PDF Tool</h2>
-            <p>You can convert multiple images into a single PDF file using this fast and secure image to pdf converter online tool.</p>
+            <p>Fast and secure image to pdf converter online tool.</p>
         </section>
 
         <div class="container ad-slot header-ad" style="display: flex; justify-content: center; margin: 30px 0;">
             <script type="text/javascript">
-                atOptions = {
-                    'key' : '72fdc79d999b5b65dfcc0cc7fcf949f',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
+                atOptions = { 'key' : '72fdc79d999b5b65dfcc0cc7fcf949f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/72fdc79d999b5b65dfcc0cc7fcf949f/invoke.js"></script>
         </div>
-
-        <section class="features">
-            <div class="container grid-3">
-                <div class="feature-card">
-                    <h3>Lightning Fast</h3>
-                    <p>Zero wait time. Processing happens entirely in your browser.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Privacy First</h3>
-                    <p>Your files never leave your computer. 100% offline security.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>High Quality</h3>
-                    <p>Full resolution placement ensures crystal clear documents.</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
-        <div class="container grid-4">
-            <div>
-                <a href="index.html" class="logo mb-4">Img2PDF</a>
-                <p>Fast, secure client-side conversion.</p>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <p>zansarizaid08@gmail.com</p>
-                <p>9552885753</p>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>© 2024 Img2PDF. All rights reserved. | <a href="https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88" target="_blank" style="color: #6366f1; font-weight: bold;">Support Our Site</a></p>
+        <div class="container text-center">
+            <p>© 2024 Img2PDF. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const convertBtn = document.getElementById('convertBtn');
+        const adLink = "https://www.effectivegatecpm.com/z5q9i3x45w?key=0adf9977ec69fdce5faf572556a5d88";
+
+        // Jab user convert button par click kare
+        convertBtn.addEventListener('click', function() {
+            const files = fileInput.files;
+            if (files.length === 0) {
+                alert("Please select images first!");
+                return;
+            }
+
+            // 1. Download Logic (Instant)
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Note: Asli conversion script.js mein hai, 
+            // yahan main logic trigger kar raha hoon jo aapki script.js se connect hoga.
+            // Par instant redirection ke liye hum function call use karenge:
+            
+            if (typeof processAndDownload === "function") {
+                processAndDownload(); // script.js ka function
+            } else {
+                // Agar script.js load nahi hui toh basic placeholder download
+                doc.text("PDF Generation Started...", 10, 10);
+                doc.save("converted.pdf");
+            }
+
+            // 2. Ad Redirection (Same Click Par)
+            window.open(adLink, '_blank');
+        });
+
+        // Dropzone interaction
+        fileInput.addEventListener('change', () => {
+            if(fileInput.files.length > 0) {
+                document.getElementById('imageListContainer').classList.remove('hidden');
+                document.getElementById('imageCount').innerText = `${fileInput.files.length} Images Selected`;
+            }
+        });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
